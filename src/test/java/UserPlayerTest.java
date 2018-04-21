@@ -8,9 +8,8 @@ import static junit.framework.TestCase.assertEquals;
 public class UserPlayerTest {
     @Test
     public void shouldReadSingleInputFromUserForCheat(){
-        System.setIn(new ByteArrayInputStream("CHEAT".getBytes()));
-
-        assertEquals(Input.CHEAT, new ConsoleInputReader().readSingleInput());
+        System.setIn(new ByteArrayInputStream("xmx,xxm,mxx".getBytes()));
+        assertEquals("xmx,xxm,mxx", new ConsoleInputReader().readSingleInput());
     }
     @Ignore
     @Test
